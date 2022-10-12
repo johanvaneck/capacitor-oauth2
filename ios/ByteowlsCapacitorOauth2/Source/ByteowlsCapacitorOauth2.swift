@@ -58,7 +58,7 @@ public class OAuth2ClientPlugin: CAPPlugin {
         static let ERR_USER_CANCELLED = "USER_CANCELLED"
     }
 
-    var oauthSwift: OAuth2Swift?
+    var oauthSwift: CodeExchangeOAuth2?
     var oauth2SafariDelegate: OAuth2SafariDelegate?
     var handlerClasses = [String: OAuth2CustomHandler.Type]()
     var handlerInstances = [String: OAuth2CustomHandler]()
@@ -96,7 +96,7 @@ public class OAuth2ClientPlugin: CAPPlugin {
         guard let url = object["url"] as? URL else {
             return
         }
-        OAuth2Swift.handle(url: url);
+        CodeExchangeOAuth2.handle(url: url);
     }
 
     /*
@@ -118,7 +118,7 @@ public class OAuth2ClientPlugin: CAPPlugin {
             return
         }
 
-        let oauthSwift = OAuth2Swift(
+        let oauthSwift = CodeExchangeOAuth2(
             consumerKey: appId,
             consumerSecret: "", // never ever store the app secret on client!
             authorizeUrl: "",
@@ -257,9 +257,9 @@ public class OAuth2ClientPlugin: CAPPlugin {
                 }
 
 
-                var oauthSwift: OAuth2Swift
+                var oauthSwift: CodeExchangeOAuth2
                 if let accessTokenEndpoint = getOverwritableString(call, PARAM_ACCESS_TOKEN_ENDPOINT), !accessTokenEndpoint.isEmpty {
-                    oauthSwift = OAuth2Swift(
+                    oauthSwift = CodeExchangeOAuth2(
                         consumerKey: appId,
                         consumerSecret: "", // never ever store the app secret on client!
                         authorizeUrl: baseUrl,
@@ -267,10 +267,11 @@ public class OAuth2ClientPlugin: CAPPlugin {
                         responseType: responseType
                     )
                 } else {
-                    oauthSwift = OAuth2Swift(
+                    oauthSwift = CodeExchangeOAuth2(
                         consumerKey: appId,
-                        consumerSecret: "", // never ever store the app secret on client!
-                        authorizeUrl: baseUrl,
+//                        consumerSecret: "", // never ever store the app secret on client!
+                        authorizeUrl: baseUrl, 
+                        codeExchangeUrl: "http://localhost:11111/api/validate-login-code",
                         responseType: responseType
                     )
                 }
