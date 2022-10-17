@@ -271,7 +271,8 @@ public class OAuth2ClientPlugin: CAPPlugin {
                         consumerKey: appId,
 //                        consumerSecret: "", // never ever store the app secret on client!
                         authorizeUrl: baseUrl, 
-                        codeExchangeUrl: "http://localhost:11111/api/validate-login-code",
+                        codeExchangeUrl: "https://quest-alpha.trimble.com/api/validate-login-code",
+//                        codeExchangeUrl: "http://localhost:11111/api/validate-login-code",
                         responseType: responseType
                     )
                 }
