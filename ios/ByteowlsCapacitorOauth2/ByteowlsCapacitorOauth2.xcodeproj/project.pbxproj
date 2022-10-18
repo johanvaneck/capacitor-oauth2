@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18DD3EC6FD926A19540AA106 /* Pods_ByteowlsCapacitorOauth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F94771610D9566B3ED5847 /* Pods_ByteowlsCapacitorOauth2.framework */; };
-		FE1C41BD21861FFC00F8236E /* ByteowlsCapacitorOauth2.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1C41BB21861FFC00F8236E /* ByteowlsCapacitorOauth2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18DD3EC6FD926A19540AA106 /* Pods_TrimbleQuestCapacitorOauth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F94771610D9566B3ED5847 /* Pods_TrimbleQuestCapacitorOauth2.framework */; };
+		FE1C41BD21861FFC00F8236E /* TrimbleQuestCapacitorOauth2.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1C41BB21861FFC00F8236E /* TrimbleQuestCapacitorOauth2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE6A4CC02441A56C00C4A2EB /* OAuth2SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A4CBF2441A56C00C4A2EB /* OAuth2SafariDelegate.swift */; };
-		FE9AC5F721862144009471A9 /* ByteowlsCapacitorOauth2.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9AC5F421862144009471A9 /* ByteowlsCapacitorOauth2.m */; };
-		FE9AC5F821862144009471A9 /* ByteowlsCapacitorOauth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9AC5F521862144009471A9 /* ByteowlsCapacitorOauth2.swift */; };
+		FE9AC5F721862144009471A9 /* TrimbleQuestCapacitorOauth2.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9AC5F421862144009471A9 /* TrimbleQuestCapacitorOauth2.m */; };
+		FE9AC5F821862144009471A9 /* TrimbleQuestCapacitorOauth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9AC5F521862144009471A9 /* TrimbleQuestCapacitorOauth2.swift */; };
 		FECF0E40218727CB000096F6 /* OAuth2CustomHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF0E3F218727CB000096F6 /* OAuth2CustomHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50F94771610D9566B3ED5847 /* Pods_ByteowlsCapacitorOauth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ByteowlsCapacitorOauth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80D48D1199882E584EB5E775 /* Pods-ByteowlsCapacitorOauth2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ByteowlsCapacitorOauth2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ByteowlsCapacitorOauth2/Pods-ByteowlsCapacitorOauth2.release.xcconfig"; sourceTree = "<group>"; };
-		E93EEABDBC3E0F5423DF22EB /* Pods-ByteowlsCapacitorOauth2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ByteowlsCapacitorOauth2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ByteowlsCapacitorOauth2/Pods-ByteowlsCapacitorOauth2.debug.xcconfig"; sourceTree = "<group>"; };
-		FE1C41B821861FFC00F8236E /* ByteowlsCapacitorOauth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ByteowlsCapacitorOauth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE1C41BB21861FFC00F8236E /* ByteowlsCapacitorOauth2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteowlsCapacitorOauth2.h; sourceTree = "<group>"; };
+		50F94771610D9566B3ED5847 /* Pods_TrimbleQuestCapacitorOauth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrimbleQuestCapacitorOauth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D48D1199882E584EB5E775 /* Pods-TrimbleQuestCapacitorOauth2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrimbleQuestCapacitorOauth2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrimbleQuestCapacitorOauth2/Pods-TrimbleQuestCapacitorOauth2.release.xcconfig"; sourceTree = "<group>"; };
+		E93EEABDBC3E0F5423DF22EB /* Pods-TrimbleQuestCapacitorOauth2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrimbleQuestCapacitorOauth2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrimbleQuestCapacitorOauth2/Pods-TrimbleQuestCapacitorOauth2.debug.xcconfig"; sourceTree = "<group>"; };
+		FE1C41B821861FFC00F8236E /* TrimbleQuestCapacitorOauth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrimbleQuestCapacitorOauth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1C41BB21861FFC00F8236E /* TrimbleQuestCapacitorOauth2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrimbleQuestCapacitorOauth2.h; sourceTree = "<group>"; };
 		FE1C41BC21861FFC00F8236E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6A4CBF2441A56C00C4A2EB /* OAuth2SafariDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2SafariDelegate.swift; sourceTree = "<group>"; };
-		FE9AC5F421862144009471A9 /* ByteowlsCapacitorOauth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteowlsCapacitorOauth2.m; sourceTree = "<group>"; };
-		FE9AC5F521862144009471A9 /* ByteowlsCapacitorOauth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteowlsCapacitorOauth2.swift; sourceTree = "<group>"; };
+		FE9AC5F421862144009471A9 /* TrimbleQuestCapacitorOauth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrimbleQuestCapacitorOauth2.m; sourceTree = "<group>"; };
+		FE9AC5F521862144009471A9 /* TrimbleQuestCapacitorOauth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimbleQuestCapacitorOauth2.swift; sourceTree = "<group>"; };
 		FECF0E3F218727CB000096F6 /* OAuth2CustomHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2CustomHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DD3EC6FD926A19540AA106 /* Pods_ByteowlsCapacitorOauth2.framework in Frameworks */,
+				18DD3EC6FD926A19540AA106 /* Pods_TrimbleQuestCapacitorOauth2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,8 +43,8 @@
 		34F01263DFDE9AF275C9C619 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E93EEABDBC3E0F5423DF22EB /* Pods-ByteowlsCapacitorOauth2.debug.xcconfig */,
-				80D48D1199882E584EB5E775 /* Pods-ByteowlsCapacitorOauth2.release.xcconfig */,
+				E93EEABDBC3E0F5423DF22EB /* Pods-TrimbleQuestCapacitorOauth2.debug.xcconfig */,
+				80D48D1199882E584EB5E775 /* Pods-TrimbleQuestCapacitorOauth2.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -52,7 +52,7 @@
 		7144C000E7B46E365CE4F0B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50F94771610D9566B3ED5847 /* Pods_ByteowlsCapacitorOauth2.framework */,
+				50F94771610D9566B3ED5847 /* Pods_TrimbleQuestCapacitorOauth2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 		FE1C41B921861FFC00F8236E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE1C41B821861FFC00F8236E /* ByteowlsCapacitorOauth2.framework */,
+				FE1C41B821861FFC00F8236E /* TrimbleQuestCapacitorOauth2.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 		FE1C41BA21861FFC00F8236E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				FE9AC5F421862144009471A9 /* ByteowlsCapacitorOauth2.m */,
-				FE9AC5F521862144009471A9 /* ByteowlsCapacitorOauth2.swift */,
-				FE1C41BB21861FFC00F8236E /* ByteowlsCapacitorOauth2.h */,
+				FE9AC5F421862144009471A9 /* TrimbleQuestCapacitorOauth2.m */,
+				FE9AC5F521862144009471A9 /* TrimbleQuestCapacitorOauth2.swift */,
+				FE1C41BB21861FFC00F8236E /* TrimbleQuestCapacitorOauth2.h */,
 				FE1C41BC21861FFC00F8236E /* Info.plist */,
 				FECF0E3F218727CB000096F6 /* OAuth2CustomHandler.swift */,
 				FE6A4CBF2441A56C00C4A2EB /* OAuth2SafariDelegate.swift */,
@@ -95,16 +95,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1C41BD21861FFC00F8236E /* ByteowlsCapacitorOauth2.h in Headers */,
+				FE1C41BD21861FFC00F8236E /* TrimbleQuestCapacitorOauth2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FE1C41B721861FFC00F8236E /* ByteowlsCapacitorOauth2 */ = {
+		FE1C41B721861FFC00F8236E /* TrimbleQuestCapacitorOauth2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE1C41C021861FFC00F8236E /* Build configuration list for PBXNativeTarget "ByteowlsCapacitorOauth2" */;
+			buildConfigurationList = FE1C41C021861FFC00F8236E /* Build configuration list for PBXNativeTarget "TrimbleQuestCapacitorOauth2" */;
 			buildPhases = (
 				714F7C29706103C851AD5B57 /* [CP] Check Pods Manifest.lock */,
 				FE1C41B321861FFC00F8236E /* Headers */,
@@ -116,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = ByteowlsCapacitorOauth2;
-			productName = ByteowlsCapacitorOauth2;
-			productReference = FE1C41B821861FFC00F8236E /* ByteowlsCapacitorOauth2.framework */;
+			name = TrimbleQuestCapacitorOauth2;
+			productName = TrimbleQuestCapacitorOauth2;
+			productReference = FE1C41B821861FFC00F8236E /* TrimbleQuestCapacitorOauth2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FE1C41B221861FFC00F8236E /* Build configuration list for PBXProject "ByteowlsCapacitorOauth2" */;
+			buildConfigurationList = FE1C41B221861FFC00F8236E /* Build configuration list for PBXProject "TrimbleQuestCapacitorOauth2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -149,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE1C41B721861FFC00F8236E /* ByteowlsCapacitorOauth2 */,
+				FE1C41B721861FFC00F8236E /* TrimbleQuestCapacitorOauth2 */,
 			);
 		};
 /* End PBXProject section */
@@ -176,7 +176,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ByteowlsCapacitorOauth2-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TrimbleQuestCapacitorOauth2-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -190,9 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE9AC5F821862144009471A9 /* ByteowlsCapacitorOauth2.swift in Sources */,
+				FE9AC5F821862144009471A9 /* TrimbleQuestCapacitorOauth2.swift in Sources */,
 				FE6A4CC02441A56C00C4A2EB /* OAuth2SafariDelegate.swift in Sources */,
-				FE9AC5F721862144009471A9 /* ByteowlsCapacitorOauth2.m in Sources */,
+				FE9AC5F721862144009471A9 /* TrimbleQuestCapacitorOauth2.m in Sources */,
 				FECF0E40218727CB000096F6 /* OAuth2CustomHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +326,7 @@
 		};
 		FE1C41C121861FFC00F8236E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E93EEABDBC3E0F5423DF22EB /* Pods-ByteowlsCapacitorOauth2.debug.xcconfig */;
+			baseConfigurationReference = E93EEABDBC3E0F5423DF22EB /* Pods-TrimbleQuestCapacitorOauth2.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -343,7 +343,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.byteowls.capacitor-oauth2.ByteowlsCapacitorOauth2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.byteowls.capacitor-oauth2.TrimbleQuestCapacitorOauth2";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -355,7 +355,7 @@
 		};
 		FE1C41C221861FFC00F8236E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80D48D1199882E584EB5E775 /* Pods-ByteowlsCapacitorOauth2.release.xcconfig */;
+			baseConfigurationReference = 80D48D1199882E584EB5E775 /* Pods-TrimbleQuestCapacitorOauth2.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -372,7 +372,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.byteowls.capacitor-oauth2.ByteowlsCapacitorOauth2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.byteowls.capacitor-oauth2.TrimbleQuestCapacitorOauth2";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -384,7 +384,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE1C41B221861FFC00F8236E /* Build configuration list for PBXProject "ByteowlsCapacitorOauth2" */ = {
+		FE1C41B221861FFC00F8236E /* Build configuration list for PBXProject "TrimbleQuestCapacitorOauth2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE1C41BE21861FFC00F8236E /* Debug */,
@@ -393,7 +393,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE1C41C021861FFC00F8236E /* Build configuration list for PBXNativeTarget "ByteowlsCapacitorOauth2" */ = {
+		FE1C41C021861FFC00F8236E /* Build configuration list for PBXNativeTarget "TrimbleQuestCapacitorOauth2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE1C41C121861FFC00F8236E /* Debug */,

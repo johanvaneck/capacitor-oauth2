@@ -1,6 +1,6 @@
 {
-    "name": "@quest/capacitor-oauth2",
-    "version": "4.0.0",
+    "name": "@trimble-quest/capacitor-oauth2",
+    "version": "4.0.4",
     "description": "Capacitor OAuth 2 client plugin",
     "author": "Michael Oberwasserlechner",
     "homepage": "https://github.com/johanvaneck/capacitor-oauth2",
@@ -21,8 +21,8 @@
         "android/src/main/",
         "android/build.gradle",
         "dist/",
-        "ios/ByteowlsCapacitorOauth2/Source",
-        "ByteowlsCapacitorOauth2.podspec"
+        "ios/TrimbleQuestCapacitorOauth2/Source",
+        "TrimbleQuestCapacitorOauth2.podspec"
     ],
     "keywords": [
         "capacitor",
@@ -41,7 +41,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/moberwasserlechner/capacitor-oauth2"
+        "url": "git+https://github.com/moberwasserlechner/capacitor-oauth2.git"
     },
     "bugs": {
         "url": "https://github.com/moberwasserlechner/capacitor-oauth2/issues"
@@ -51,8 +51,6 @@
     },
     "peerDependencies": {
         "@capacitor/core": ">=4"
-    },
-    "dependencies": {
     },
     "devDependencies": {
         "@capacitor/android": "4.2.0",

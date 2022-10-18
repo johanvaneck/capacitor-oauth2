@@ -1,6 +1,6 @@
 //
 //  OAuth2SafariDelegate.swift
-//  ByteowlsCapacitorOauth2
+//  TrimbleQuestCapacitorOauth2
 //
 //  Created by Michael Oberwasserlechner on 11.04.20.
 //  Copyright © 2020 BYTEOWLS Software & Consulting. All rights reserved.
