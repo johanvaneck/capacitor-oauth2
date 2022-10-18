@@ -261,18 +261,15 @@ public class OAuth2ClientPlugin: CAPPlugin {
                 if let accessTokenEndpoint = getOverwritableString(call, PARAM_ACCESS_TOKEN_ENDPOINT), !accessTokenEndpoint.isEmpty {
                     oauthSwift = CodeExchangeOAuth2(
                         consumerKey: appId,
-                        consumerSecret: "", // never ever store the app secret on client!
-                        authorizeUrl: baseUrl,
-                        accessTokenUrl: accessTokenEndpoint,
+                        authorizeUrl: baseUrl, 
+                        codeExchangeUrl: accessTokenEndpoint,
                         responseType: responseType
                     )
                 } else {
                     oauthSwift = CodeExchangeOAuth2(
                         consumerKey: appId,
-//                        consumerSecret: "", // never ever store the app secret on client!
                         authorizeUrl: baseUrl, 
-                        codeExchangeUrl: "https://quest-alpha.trimble.com/api/validate-login-code",
-//                        codeExchangeUrl: "http://localhost:11111/api/validate-login-code",
+                        codeExchangeUrl: "",
                         responseType: responseType
                     )
                 }

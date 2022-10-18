@@ -47,13 +47,9 @@ public class CodeExchangeOAuth2: OAuth2Swift {
         }
 
         // TODO abstract to make universal
-        parameters["platform"] = "android"
+        parameters["platform"] = "ios"
         let json = try! JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted)
-        
-        let queryString = "?hostname=lulabuild&datetime=2022-10-11T09%3A37%3A03.381&api=%2F%2Fquest-alpha.trimble.com%2Fapi&phase=2"
-        // 
 
-        
-        return self.client.request(codeExchangeUrl + queryString, method: .POST,  body: json, checkTokenExpiration: false, completionHandler: completionHandler)
+        return self.client.request(codeExchangeUrl, method: .POST,  body: json, checkTokenExpiration: false, completionHandler: completionHandler)
     }
 }

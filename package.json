@@ -1,9 +1,9 @@
 {
-    "name": "@byteowls/capacitor-oauth2",
+    "name": "@quest/capacitor-oauth2",
     "version": "4.0.0",
     "description": "Capacitor OAuth 2 client plugin",
     "author": "Michael Oberwasserlechner",
-    "homepage": "https://github.com/moberwasserlechner/capacitor-oauth2",
+    "homepage": "https://github.com/johanvaneck/capacitor-oauth2",
     "license": "MIT",
     "main": "dist/esm/index.js",
     "module": "dist/esm/index.js",
