@@ -1,6 +1,6 @@
 {
     "name": "@trimble-quest/capacitor-oauth2",
-    "version": "4.0.4",
+    "version": "4.0.5",
     "description": "Capacitor OAuth 2 client plugin",
     "author": "Michael Oberwasserlechner",
     "homepage": "https://github.com/johanvaneck/capacitor-oauth2",
