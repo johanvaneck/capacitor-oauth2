@@ -1,5 +1,27 @@
 # Changelog
 
+## [5.0.0] - 2023-09-04
+
+### Breaking
+* Minimum Capacitor version is **5.0.0**.! [#211](https://github.com/moberwasserlechner/capacitor-oauth2/issues/211)
+* Remove web option `windowReplace` as it is deprecated and gives build exceptions. See https://www.w3schools.com/jsref/met_win_open.asp for details.
+
+## [4.0.2] - 2023-04-11
+
+### Fixed
+
+* Web: Parse url parameters for search and hash properly [#183](https://github.com/moberwasserlechner/capacitor-oauth2/pull/183), [#182](https://github.com/moberwasserlechner/capacitor-oauth2/issues/182). Thank you, [@jvartanian](https://github.com/jvartanian)
+
+## [4.0.1] - 2023-04-11
+
+### Fixed
+
+* Android: Additional `id_token` argument for logout method [#233](https://github.com/moberwasserlechner/capacitor-oauth2/pull/233). Thank you, [@svzi](https://github.com/svzi)
+
+### Chore
+
+* Update dev dependencies
+
 ## [4.0.0] - 2022-09-18
 
 ### Fixed
@@ -123,7 +145,10 @@ This is controlled by Android specific parameters `handleResultOnNewIntent` for 
 - Android: Fix Java compiler error #36 (thx @Anthbs)
 - Fix github security error by updating Jest lib
 
-[Unreleased]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/4.0.0...main
+[Unreleased]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/5.0.0...main
+[5.0.0]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/4.0.2...5.0.0
+[4.0.2]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/4.0.1...4.0.2
+[4.0.1]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/3.0.1...4.0.0
 [3.0.1]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/moberwasserlechner/capacitor-oauth2/compare/2.1.0...3.0.0

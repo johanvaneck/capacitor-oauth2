@@ -14,9 +14,10 @@ export interface OAuth2ClientPlugin {
     /**
      * Logout from the authenticated OAuth 2 provider
      * @param {OAuth2AuthenticateOptions} options Although not all options are needed. We simply reuse the options from authenticate
+     * @param {String} id_token Optional idToken, only for Android
      * @returns {Promise<boolean>} true if the logout was successful else false.
      */
-    logout(options: OAuth2AuthenticateOptions): Promise<boolean>;
+    logout(options: OAuth2AuthenticateOptions, id_token?: string): Promise<boolean>;
 }
 
 export interface OAuth2RefreshTokenOptions {
@@ -132,12 +133,6 @@ export interface WebOption extends OAuth2AuthenticateBaseOptions {
      * Options for the window target. Defaults to _blank
      */
     windowTarget?: string;
-    /**
-     * Specifies whether the window URL creates a new entry or replaces the current entry in the history list. Defaults to undefined.
-     * @see https://www.w3schools.com/jsref/met_win_open.asp
-     * @since 3.0.0
-     */
-    windowReplace?: boolean;
 }
 
 export interface AndroidOptions extends OAuth2AuthenticateBaseOptions {
