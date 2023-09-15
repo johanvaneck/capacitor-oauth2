@@ -1,45 +1,42 @@
 # Capacitor OAuth 2 client plugin
 
 <a href="#sponsors"><img src="https://img.shields.io/badge/plugin-Sponsors-blue?style=flat-square" /></a>
-<a href="https://github.com/moberwasserlechner/capacitor-oauth2/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/moberwasserlechner/capacitor-oauth2/CI?style=flat-square" /></a>
-<a href="https://www.npmjs.com/package/@trimble-quest/capacitor-oauth2"><img src="https://img.shields.io/npm/dw/@trimble-quest/capacitor-oauth2?style=flat-square" /></a>
-<a href="https://www.npmjs.com/package/@trimble-quest/capacitor-oauth2"><img src="https://img.shields.io/npm/v/@trimble-quest/capacitor-oauth2?style=flat-square" /></a>
-<a href="LICENSE"><img src="https://img.shields.io/npm/l/@trimble-quest/capacitor-oauth2?style=flat-square" /></a>
+<a href="https://github.com/moberwasserlechner/capacitor-oauth2/actions/workflows/ci.yml"><img src="https://github.com/moberwasserlechner/capacitor-oauth2/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
+<a href="https://www.npmjs.com/package/@byteowls/capacitor-oauth2"><img src="https://img.shields.io/npm/dw/@byteowls/capacitor-oauth2?style=flat-square" /></a>
+<a href="https://www.npmjs.com/package/@byteowls/capacitor-oauth2"><img src="https://img.shields.io/npm/v/@byteowls/capacitor-oauth2?style=flat-square" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/npm/l/@byteowls/capacitor-oauth2?style=flat-square" /></a>
 
 This is a **generic OAuth 2 client** plugin. It let you configure the oauth parameters yourself instead of using SDKs. Therefore it is usable with various providers.
 See [identity providers](#list-of-providers) the community has already used this plugin with.
 
 ## How to install
 
-For Capacitor v4
-
+For Capacitor v5
 ```bash
 npm i @trimble-quest/capacitor-oauth2
 npx cap sync
 ```
 
-For Capacitor v3 use `3.0.1`
-
+For Capacitor v4
 ```bash
-npm i @trimble-quest/capacitor-oauth2@3.0.1
+npm i @byteowls/capacitor-oauth2@4
 npx cap sync
 ```
-
-For Capacitor v2 use `2.1.0`
-
+For Capacitor v3
 ```bash
-npm i @trimble-quest/capacitor-oauth2@2.1.0
+npm i @byteowls/capacitor-oauth2@3
 npx cap sync
 ```
 
 ## Versions
 
-| Plugin | For Capacitor | Docs                                                                                        | Notes                                                         |
-| ------ | ------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| 4.x    | 4.x.x         | [README](./README.md)                                                                       | Breaking changes see Changelog. XCode 12.0 needs this version |
-| 3.x    | 3.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/tree/release/3.x/README.md) | Breaking changes see Changelog. XCode 12.0 needs this version |
-| 2.x    | 2.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/tree/release/2.x/README.md) | Breaking changes see Changelog. XCode 11.4 needs this version |
-| 1.x    | 1.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/blob/1.1.0/README.md)       |                                                               |
+| Plugin | For Capacitor | Docs                                                                                  | Notes                                                         |
+|--------|---------------|---------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| 5.x    | 5.x.x         | [README](./README.md)                                                                 | Breaking changes see Changelog. XCode 14.1 needs this version |
+| 4.x    | 4.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/blob/4.0.0/README.md) | Breaking changes see Changelog. XCode 12.0 needs this version |
+| 3.x    | 3.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/blob/3.0.1/README.md) | Breaking changes see Changelog. XCode 12.0 needs this version |
+| 2.x    | 2.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/blob/2.1.0/README.md) | Breaking changes see Changelog. XCode 11.4 needs this version |
+| 1.x    | 1.x.x         | [README](https://github.com/moberwasserlechner/capacitor-oauth2/blob/1.1.0/README.md) |                                                               |
 
 For further details on what has changed see the [CHANGELOG](https://github.com/moberwasserlechner/capacitor-oauth2/blob/main/CHANGELOG.md).
 
@@ -121,13 +118,15 @@ import { OAuth2Client } from "@trimble-quest/capacitor-oauth2";
         '<button (click)="onLogoutClick()">Logout OAuth</button>',
 })
 export class SignupComponent {
+    accessToken: string;
     refreshToken: string;
 
     onOAuthBtnClick() {
-        OAuth2Client.authenticate(oauth2Options)
-            .then((response) => {
-                let accessToken = response["access_token"];
-                this.refreshToken = response["refresh_token"];
+        OAuth2Client.authenticate(
+            oauth2Options
+        ).then(response => {
+            this.accessToken = response["access_token"]; // storage recommended for android logout
+            this.refreshToken = response["refresh_token"];
 
                 // only if you include a resourceUrl protected user values are included in the response!
                 let oauthUserId = response["id"];
@@ -146,21 +145,23 @@ export class SignupComponent {
             console.error("No refresh token found. Log in with OAuth first.");
         }
 
-        OAuth2Client.refreshToken(oauth2RefreshOptions)
-            .then((response) => {
-                let accessToken = response["access_token"];
-                // Don't forget to store the new refresh token as well!
-                this.refreshToken = response["refresh_token"];
-                // Go to backend
-            })
-            .catch((reason) => {
-                console.error("Refreshing token failed", reason);
-            });
+      OAuth2Client.refreshToken(
+        oauth2RefreshOptions
+      ).then(response => {
+        this.accessToken = response["access_token"]; // storage recommended for android logout
+        // Don't forget to store the new refresh token as well!
+        this.refreshToken = response["refresh_token"];
+        // Go to backend
+      }).catch(reason => {
+          console.error("Refreshing token failed", reason);
+      });
     }
 
     onLogoutClick() {
-        OAuth2Client.logout(oauth2LogoutOptions)
-            .then(() => {
+            OAuth2Client.logout(
+                oauth2LogoutOptions,
+                this.accessToken // only used on android
+            ).then(() => {
                 // do something
             })
             .catch((reason) => {
@@ -304,7 +305,7 @@ On Android the plugin is registered **automatically** by Capacitor.
 
 ### Android Default Config
 
-Skip this, if you use a [OAuth2CustomHandler](#custom-oauth-handler)
+Skip this, if you use a `OAuth2CustomHandler`. See below.
 
 #### android/app/src/main/res/AndroidManifest.xml
 
@@ -370,8 +371,14 @@ android.buildTypes.release.manifestPlaceholders = [
 ]
 ```
 
-2. "ERR_ANDROID_RESULT_NULL": See [Issue #52](https://github.com/moberwasserlechner/capacitor-oauth2/issues/52#issuecomment-525715515) for details.
-   I cannot reproduce this behaviour. Moreover there might be situation this state is valid. In other cases e.g. in the linked issue a configuration tweak fixed it.
+2) "ERR_ANDROID_RESULT_NULL": See [Issue #52](https://github.com/moberwasserlechner/capacitor-oauth2/issues/52#issuecomment-525715515) for details.
+I cannot reproduce this behaviour. Moreover, there might be situation this state is valid. In other cases e.g. in the linked issue a configuration tweak fixed it.
+
+3) To prevent some logout issues on certain OAuth2 providers (like Salesforce for example), you should provide the `id_token` parameter on the `logout(...)` function.
+This ensures that not only the cookies are deleted, but also the logout link is called from the OAuth2 provider.
+Also, it uses the system browser that the plugin uses (and not the user's default browser) to call the logout URL.
+This additionally ensures that the cookies are deleted in the correct browser.
+
 
 ### Custom OAuth Handler
 
@@ -379,7 +386,7 @@ Some OAuth provider (Facebook) force developers to use their SDK on Android.
 
 This plugin should be as generic as possible so I don't want to include provider specific dependencies.
 
-Therefore I created a mechanism which let developers integrate custom SDK features in this plugin.
+Therefore, I created a mechanism which let developers integrate custom SDK features in this plugin.
 Simply configure a full qualified classname in the option property `android.customHandlerClass`.
 This class has to implement `com.trimble-quest.capacitor.oauth2.handler.OAuth2CustomHandler`.
 
@@ -393,7 +400,7 @@ On iOS the plugin is registered **automatically** by Capacitor.
 
 ### iOS Default Config
 
-Skip this, if you use a [OAuth2CustomHandler](#custom-oauth-handler-1)
+Skip this, if you use a `OAuth2CustomHandler`. See below.
 
 Open `ios/App/App/Info.plist` in XCode (Context menu -> Open as -> Source) and add the value of `redirectUrl` from your config without `:/` like that
 
@@ -1161,12 +1168,6 @@ See [CHANGELOG](https://github.com/moberwasserlechner/capacitor-oauth2/blob/main
 ## License
 
 MIT. See [LICENSE](https://github.com/moberwasserlechner/capacitor-oauth2/blob/main/LICENSE).
-
-## BYTEOWLS Software & Consulting
-
-This plugin is powered by [BYTEOWLS Software & Consulting](https://trimble-quest.com).
-
-If you need extended support for this project like critical changes or releases ahead of schedule. Feel free to contact us for a consulting offer.
 
 ## Disclaimer
 
